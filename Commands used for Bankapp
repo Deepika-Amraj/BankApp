@@ -1,0 +1,10 @@
+ubuntu@ip-172-31-83-243:~/Springboot-BankApp$ history
+    1  docker ps
+    2  docker build -t bankapp .
+    3  docker images
+    4  docker network create bankapp
+    5  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=Test@123 -e MYSQL_DATABASE=BankDB --network=bankapp mysql
+    6  docker run -itd --name BankApp -e SPRING_DATASOURCE_USERNAME="root" -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/BankDB?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC" -e SPRING_DATASOURCE_PASSWORD="Test@123" --network=bankapp -p 8080:8080 bankapp:latest
+    7  docker ps
+    8  docker logs
+    9  history
